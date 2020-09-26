@@ -1,0 +1,480 @@
+@import "_variables";
+@import "_global";
+@import "_navbar";
+@import "_buttons";
+/*------------------------------------------------*/
+//preloading screen 
+.preloading-screen 
+{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:5555555556;
+    background-color:$darkBlue;
+    .sk-chase 
+    {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        animation: sk-chase 2.5s infinite linear both;
+        margin:40px auto;
+        .sk-chase-dot 
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0; 
+            animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+            &:before 
+            {
+                content: '';
+                display: block;
+                width: 25%;
+                height: 25%;
+                background-color: $bage;
+                border-radius: 100%;
+                animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+            }
+        }
+    }
+}
+
+.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+
+@keyframes sk-chase {
+  100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot {
+  80% , 100% { transform: rotate(360deg); } 
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    transform: scale(0.4); 
+  } 100%, 0% {
+    transform: scale(1.0); 
+  } 
+}
+//start header
+.header 
+{
+    position:relative;
+    .owl-carousel 
+    {
+        img 
+        {
+            height:600px;
+        }
+    }
+    .overlay-content
+    {
+        position: absolute;
+        top:0;
+        left:0;
+        z-index:4;
+        width:100%;
+        .container 
+        {
+            .callus 
+            {
+                position: absolute;
+                right:125px;
+                background-color:$darkBlue;
+                color:white;
+                padding:10px 20px;
+                i , svg
+                {
+                    display:inline-block;
+                    margin-right:10px;
+                }
+
+            }
+            .stun-home 
+            {
+                width:350px;
+                position: absolute;
+                top:260px;
+                background-color:$darkBlueLowOp;
+                color:white;
+                padding: 40px 20px;
+                @media only screen and (max-width:360px)
+                {
+                    width:330px;
+                }
+                h2 
+                {
+                    font-size:2rem;
+                    margin-bottom:15px;
+                }
+                hr
+                {
+                    border-top:2px solid white;
+                }
+                .stun-home-price 
+                {
+                    font-size:2rem;
+                    display:block;
+                    font-weight:bold;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}
+/*-------------------------------------------------------*/
+//latest prop 
+.latest-prop 
+{
+    padding-top:220px;
+    .container 
+    {
+        h4 
+        {
+            text-align:center;
+            font-weight:bold;
+            font-size:2rem;
+            text-transform: uppercase;
+            color:$darkBlue;
+            margin-bottom:30px;
+        }
+        .row 
+        {
+            .prop-card 
+            {
+                img 
+                {
+                    width:100%;
+                }
+                .prop-card-info 
+                {
+                    h6 
+                    {
+                        font-weight:600;
+                        text-transform: uppercase;
+                        color:$darkBlue;
+                        font-size:18px;
+                        padding: 15px 0 0 0;
+                    }
+                    .prop-price 
+                    {
+                        color:$lightBlue;
+                        display: block;
+                        margin-bottom:10px;
+                        font-size:20px;
+                    }
+                    .bedrooms-number 
+                    {
+                        color:$bage;
+                        margin-bottom:10px;
+                    }
+                    p 
+                    {
+                        color:$lightGray;
+                    }
+                    .trans-btn 
+                    {
+                        color:$lightBlue;
+                        border:2px solid $lightBlue;
+                        font-weight:normal;
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+    }
+}
+/*--------------------------------------------------*/ 
+//latest rental 
+.latest-rental 
+{
+    margin:70px 0;
+    h4 
+    {
+        text-align:center;
+        font-weight:bold;
+        font-size:2rem;
+        text-transform: uppercase;
+        color:$darkBlue;
+        margin-bottom:100px;
+    }
+    .rental-card 
+    {
+        background-color:$darkBlue;
+        padding:30px 0;
+        .rental-card-info 
+        {
+            width:800px;
+            margin:auto;
+            display:flex;
+            max-width:100%;
+            @media only screen and (max-width:414px)
+            {
+                display:block;
+            }
+            .rental-card-info-img 
+            {
+                position: relative;
+                top:-70px;
+                width:300px;
+                @media only screen and (max-width:768px)
+                {
+                    left:15px;
+                }
+            }
+            .rental-card-info-data 
+            {
+                margin:50px 30px;
+                .rent-name 
+                {
+                    color:white;
+                    font-weight:600;
+                    text-transform: uppercase;
+                    font-size:22px;
+                    display:block;
+                    margin-bottom:10px;
+                }
+                .bedrooms-number 
+                {
+                    display:block;
+                    color:$bage;
+                    margin-bottom:10px;
+                    text-transform:uppercase;
+                }
+                p 
+                {
+                    color:$lightGray;
+                }
+                .rent-price 
+                {
+                    color:$lightBlue;
+                    text-transform: uppercase;
+                    font-size:23px;
+                }
+            }
+        }
+        &.rental-card-down 
+        {
+            background-color:$midBlue;
+            .rental-card-info-img
+            {
+                top:29px;
+                @media only screen and (max-width:768px)
+                {
+                    right:15px;
+                    left:-15px;
+                }
+                @media only screen and (max-width:414px)
+                {
+                    top:0;
+                    left:15px;
+                }
+            }
+        }
+        
+    }
+}
+/*------------------------------------------------------------*/
+//realtors 
+.realtors 
+{
+    margin-bottom:50px;
+    .container 
+    {
+        h4 
+        {
+            font-size:2rem;
+            text-align:center;
+            color:$darkBlue;
+            text-transform:uppercase;
+            font-weight:600;
+            margin:20px 0 40px;
+        }
+        .row 
+        {
+            .realtors-card 
+            {
+                text-align:center;
+                padding:40px ;
+                svg
+                {
+                    font-size:50px;
+                    color:$bage;
+                    display:block;
+                    margin:auto;
+                    margin-bottom:20px;
+                    opacity:.6;
+                }
+                h5 
+                {
+                    font-size:20px;
+                    color:$darkBlue;
+                    text-transform: uppercase;
+                    font-weight:600;
+                }
+                span 
+                {
+                    color:$lightBlue;
+                }
+            }
+        }
+    }
+}
+/*-----------------------------------------------*/  
+//testemoials
+.test 
+{
+    background:url("../images/test-bg.jpg");
+    background-size:cover;
+    padding:60px 0 40px ;
+    position:relative;
+    background-attachment: fixed;
+    .overlay 
+    {
+        background-color:$midBlue;
+        opacity:.6;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+    .container 
+    {
+        color:white;
+        z-index:5;
+        h4 
+        {
+            font-size:1.5rem;
+            text-align:center;
+            text-transform: uppercase;
+            font-weight:600;
+            color:white;
+            position: relative;
+
+        }
+        .row 
+        {
+            .test-card 
+            {
+                text-align:center;
+                padding:70px;
+                @media only screen and (max-width:768px)
+                {
+                    padding:40px;
+                }
+                svg 
+                {
+                    display: block;
+                    margin:auto;
+                    color:$bage;
+                    font-size:40px; 
+                    transform:rotate(180deg);
+                    margin-bottom:20px;
+                }
+                span 
+                {
+                    color:$bage;
+                    font-weight:600;
+                }
+            }
+        }
+    }
+}
+/*--------------------------------------------------*/ 
+.contact 
+{
+    margin:60px 0;
+    .container 
+    {
+        h4 
+        {
+            font-weight:600;
+            font-size:2rem;
+            color:$darkBlue;
+            text-align:center;
+            text-transform: uppercase;
+            margin-bottom:40px;
+        }
+        .row 
+        {
+            .address-map 
+            {
+                h6 
+                {
+                    font-size:20px;
+                    color:$darkBlue;
+                    text-transform: uppercase;
+                    font-weight:600;
+                    margin-bottom:30px;
+                    &:nth-of-type(2)
+                    {
+                        margin-top:80px;
+                    }
+                }
+                span 
+                {
+                    color:$lightGray;
+                    display:block;
+                    margin-bottom:20px;
+                }
+                iframe 
+                {
+                    max-width:100%;
+                }
+                ul 
+                {
+                    list-style-type: none;
+                    li 
+                    {
+                        color:$lightGray;
+                        font-size:18px;
+                    }
+                }
+
+            }
+            .contact-form 
+            {
+                h6 
+                {
+                    font-size:20px;
+                    color:$darkBlue;
+                    text-transform: uppercase;
+                    font-weight:600;
+                    margin-bottom:30px;
+                    padding-right:20px;
+                }
+                .form 
+                {
+                    input
+                    {
+                        width:100%;
+                        margin-bottom:10px;
+                        padding:10px;
+                    }
+                    textarea 
+                    {
+                        width:100%;
+                        padding:10px;
+                    }
+                    .blue-btn 
+                    {
+                        margin-top:15px;
+                    }
+                }
+            }
+        }
+    }
+}

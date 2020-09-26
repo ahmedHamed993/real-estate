@@ -1,0 +1,84 @@
+@import "_variables";
+.navbar 
+{
+    .container
+    {
+        .navbar-collapse 
+        {
+        ///////////////////////////////////////////
+            .logo-login-section
+            {
+                .logo
+                {
+                    display:inline-block;
+                    font-weight:700;
+                    color:$darkBlue;
+                    letter-spacing: 2px;
+                    margin-right:20px;
+                    span 
+                    {
+                        font-weight:normal;
+                        letter-spacing: 1px;
+                    }
+                }
+                .login-container 
+                {
+                    display: inline-block;
+                    position: relative;
+                    top:-12px;
+                    @media only screen and (max-width:768px)
+                    {
+                        display:block;
+                        top:10px;
+                        margin-bottom:15px;
+                    }
+                    img 
+                    {
+                        width:30px;
+                        border:2px solid $darkBlue;
+                        border-radius:50%;
+                        margin-right:15px;
+                    }
+                    a 
+                    {
+                        color:$darkBlue;
+                        font-size:18px;
+                        text-decoration:none;
+                        &:hover 
+                        {
+                            color:$lightBlue;
+                        }
+                    }
+                }
+            }
+            .navbar-nav 
+            {
+                justify-content: space-between;
+                width:50%;
+                @media only screen and (max-width:768px)
+                {
+                    width:100%;
+
+                }
+                .nav-item
+                {
+                    &:hover .nav-link
+                    {
+                        color:$lightBlue;
+                    }
+                    .nav-link
+                    {
+                        color:$darkBlue;
+                        text-transform: uppercase;
+                        transition:.2s color ease-in-out;
+                        &.active 
+                        {
+                            color:$bage;
+                        }
+                    }
+                }
+            }
+        ///////////////////////////////////////////
+        }
+    }
+}

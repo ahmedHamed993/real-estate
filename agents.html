@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Real Estate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="          " href="css/bootstrap.css.map">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/agents.css">
+    </head>
+    <body>
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <div class="logo-login-section">
+                          <div class="logo">
+                              FABER <span>&</span> CO <br>
+                              <span>REAL ESTATE</span> 
+                          </div>
+                          <div class="login-container">
+                              <img src="images/user.png">
+                              <a href="#">Log In</a>
+                          </div>
+                      </div>
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item ">
+                          <a class="nav-link" href="#" @click="activeLink=1" :class="activeLink==1? 'active':''">Home </span></a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link active" href="agents.html" @click="activeLink=2" :class="activeLink==2? 'active':''">agents</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link contact-in-agent " href="index.html" @click="activeLink=3" :class="activeLink==3? 'active':''">contact</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link" href="book.html" @click="activeLink=4" :class="activeLink==4? 'active':''">book online</a>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+        </nav> 
+        <!----------------------------------------------------------------------->
+        <div class="agents">
+            <div class="container">
+                <h4>our agents</h4>
+                <div class="row">
+                    <div class="agents-card col-md-4">
+                        <img src="images/agent-one.webp">
+                        <h6>chris utan</h6>
+                        <span>sales agent</span>
+                        <ul>
+                            <li>email: info@website.com</li>
+                            <li>tel:123-456-7890 </li>
+                        </ul>
+                    </div>
+                    <div class="agents-card col-md-4">
+                        <img src="images/agent-two.webp">
+                        <h6>chris utan</h6>
+                        <span>sales agent</span>
+                        <ul>
+                            <li>email: info@website.com</li>
+                            <li>tel:123-456-7890 </li>
+                        </ul>
+                    </div>
+                    <div class="agents-card col-md-4">
+                        <img src="images/agent-three.webp">
+                        <h6>chris utan</h6>
+                        <span>sales agent</span>
+                        <ul>
+                            <li>email: info@website.com</li>
+                            <li>tel:123-456-7890 </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="agents-card col-md-4">
+                            <img src="images/agnet-four.webp">
+                            <h6>chris utan</h6>
+                            <span>sales agent</span>
+                            <ul>
+                                <li>email: info@website.com</li>
+                                <li>tel:123-456-7890 </li>
+                            </ul>
+                    </div>
+                    <div class="agents-card col-md-4">
+                            <img src="images/agent-five.webp">
+                            <h6>chris utan</h6>
+                            <span>sales agent</span>
+                            <ul>
+                                <li>email: info@website.com</li>
+                                <li>tel:123-456-7890 </li>
+                            </ul>
+                    </div>
+                    <div class="agents-card col-md-4">
+                        <div class="agents-card-info">
+                            <img src="images/agent-six.webp">
+                            <h6>chris utan</h6>
+                            <span>sales agent</span>
+                            <ul>
+                                <li>email: info@website.com</li>
+                                <li>tel:123-456-7890 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------->
+        <script src="js/jquery.js"></script>
+        <script src="js/all.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/jsCode.js"></script>
+        <script src="js/jqCode.js"></script>
+        <script src="js/vueCode.js"></script>
+    </body>
+</html>

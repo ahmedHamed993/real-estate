@@ -1,0 +1,57 @@
+@import "_variables";
+@import "_global";
+@import "_navbar";
+@import "_buttons";
+.agents 
+{
+    background-color:$darkDarkBlue;
+    .container
+    {
+    ////////////////////////////////////////
+        h4 
+        {
+            text-transform:uppercase;
+            text-align:center;
+            font-size:2rem;
+            font-weight:600;
+            color:white;
+            padding:40px 0;
+        }
+    ////////////////////////////////////////
+        .row 
+        {
+            .agents-card 
+            {
+                img 
+                {
+                    width:355px;
+                    height:400px;
+                    max-width:100%;
+                }
+                h6 
+                {
+                    color:$lightBlue;
+                    font-weight:600;
+                    font-size:1.4rem;
+                    margin:20px 0;
+                    text-transform: uppercase;
+                }
+                span 
+                {
+                    display:block;
+                    margin-bottom:20px;
+                    color:$bage;
+                    text-transform:capitalize;
+                }
+                ul 
+                {
+                    li 
+                    {
+                        color:$lightGray;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}

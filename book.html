@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Real Estate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="          " href="css/bootstrap.css.map">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/jquery.calendar.css">
+        <link rel="stylesheet" href="css/book.css">
+        
+    </head>
+    <body>
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <div class="logo-login-section">
+                          <div class="logo">
+                              FABER <span>&</span> CO <br>
+                              <span>REAL ESTATE</span> 
+                          </div>
+                          <div class="login-container">
+                              <img src="images/user.png">
+                              <a href="#">Log In</a>
+                          </div>
+                      </div>
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item ">
+                          <a class="nav-link" href="index.html" @click="activeLink=1" :class="activeLink==1? 'active':''">Home </span></a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link" href="agents.html" @click="activeLink=2" :class="activeLink==2? 'active':''">agents</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link contact-in-agent" href="index.html" @click="activeLink=3" :class="activeLink==3? 'active':''">contact</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link active" href="#" @click="activeLink=4" :class="activeLink==4? 'active':''">book online</a>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+        </nav> 
+        <!----------------------------------------------------------------------->
+        <div class="book-content" id="book-content">
+            <div class="container">
+                <div class="first-page" v-if="activePage==1">
+                    <div class="tab-menu">
+                        <ul>
+                            <li @click="activeTab=1" :class="activeTab==1? 'active':''">sale</li>
+                            <li @click="activeTab=2" :class="activeTab==2? 'active':''">rental</li>
+                            <div class="underline-active-link" :class="activeTab==2? 'translate':''"></div>
+                        </ul>
+                    </div>
+                    <div class="sale-content" v-if="activeTab==1">
+                        <div class="row">
+                            <div class="card col-md-4">
+                                <img src="images/sale-one.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>down avenue</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-two.webp" @click="activePage=2" class="source-img"> 
+                                <ul>
+                                    <li><h5>chatsworth drive</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-three.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>rendall close</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$790,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card col-md-4">
+                                <img src="images/sale-four.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>queens way</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-five.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>tyne road</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-six.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>altone lane</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rental-content"  v-if="activeTab==2">
+                        <div class="row">
+                            <div class="card col-md-4">
+                                <img src="images/sale-six.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>tyne road</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$450,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-five.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>altone lane</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn "@click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-four.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>down avenue</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card col-md-4">
+                                <img src="images/sale-three.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>randall close</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$790,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-two.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>queens way</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">Arrange a viewing</button>
+                            </div>
+                            <div class="card col-md-4">
+                                <img src="images/sale-one.webp" @click="activePage=2" class="source-img">
+                                <ul>
+                                    <li><h5>chatsworth drive</h5></li>
+                                    <li>1 hr</li>
+                                    <li>$500,000</li>
+                                </ul>
+                                <button class="blue-btn" @click="activePage=3">arrange an viewing</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-page" v-if="activePage==2">
+                    <p @click="activePage=1">back</p>
+                    <img class="destination-img" src="">
+                </div>
+                <div class="third-page" v-show="activePage==3">
+                    <p @click="activePage=1">  back</p>
+                    <h2 class="destination-home-name"> </h2>   
+                    <div id="example"></div>
+                    <span class="selected-date"></span>
+                    <button class="blue-btn" id="confirm-selected-date">confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------------------->
+        <script src="js/jquery.js"></script>
+        <script src="js/all.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/jquery.calendar.js"></script>
+        <script src="js/jqCode.js"></script>
+        <script src="js/vueCode.js"></script>
+        <script src="js/bookJsCode.js"></script>
+    </body>
+</html>

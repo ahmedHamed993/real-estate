@@ -1,0 +1,27 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html 
+{
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+}
+body 
+{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.clear 
+{
+    clear: both;
+}
+.emptyInput 
+{
+    border:1px solid red;
+}
+ul 
+{
+    list-style-type: none;
+}

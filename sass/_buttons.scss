@@ -1,0 +1,32 @@
+@import "_variables";
+.trans-btn 
+{
+    border:none;
+    outline:none;
+    background-color:transparent;
+    border:2px solid white;
+    color:white;
+    padding:10px 30px;
+    width:200px;
+    display:block;
+    margin:10px auto;
+    transition: .3s;
+    font-weight:bold;
+    &:hover 
+    {
+        color:$bage;
+        border:2px solid $bage;
+        opacity:.4;
+    }
+}
+/*-------------------------*/ 
+.blue-btn 
+{
+    border:none;
+    outline: none;
+    background-color:$darkBlue;
+    padding:10px 30px;
+    color:white;
+    display:block;
+
+}

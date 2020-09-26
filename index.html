@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Real Estate</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="          " href="css/bootstrap.css.map">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/home.css">
+    </head>   
+    <body>
+        <!---------------------------------------------------------------------------->
+        <!-- preloadingscreen -->
+        <div class="preloading-screen" id="preloading">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+
+        <!---------------------------------------------------------------------------->
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <div class="logo-login-section">
+                          <div class="logo">
+                              FABER <span>&</span> CO <br>
+                              <span>REAL ESTATE</span> 
+                          </div>
+                          <div class="login-container">
+                              <img src="images/user.png">
+                              <a href="#">Log In</a>
+                          </div>
+                      </div>
+                      <ul class="navbar-nav ml-auto">
+                          <li class="nav-item ">
+                          <a class="nav-link active" href="#" @click="activeLink=1" :class="activeLink==1? 'active':''">Home </span></a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link " href="agents.html" @click="activeLink=2" :class="activeLink==2? 'active':''">agents</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link" href="#contact" @click="activeLink=3" :class="activeLink==3? 'active':''">contact</a>
+                          </li>
+                          <li class="nav-item">
+                          <a class="nav-link" href="book.html" @click="activeLink=4" :class="activeLink==4? 'active':''">book online</a>
+                          </li>
+                      </ul>
+                  </div>
+            </div>
+         </nav>
+         <!--header-->
+        <div class="header">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="images/one.jpg"></div>
+                <div class="item"><img src="images/three.jpg"></div>
+                <div class="item"><img src="images/two.jpg"></div>
+            </div>
+            <div class="overlay-content">
+                <div class="container">
+                    <div class="callus ml-auto">
+                        <i class="fas fa-phone-alt"></i>
+                        callus! 123-456-789
+                    </div>
+                    <div class="stun-home">
+                        <h2>STUNNING 6 BED HOUSE IN THE HEART OF THE CITY</h2>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+                        <hr>
+                        <span class="stun-home-price">$2,000,000</span>
+                        <button class="trans-btn">All Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--latest prop -->
+        <div class="latest-prop">
+            <div class="container">
+                <h4>latest properties for sale</h4>
+                <div class="row">
+                    <div class="prop-card col-md-4">
+                        <img src="images/prop-one.webp">
+                        <div class="prop-card-info">
+                            <h6>down avenue</h6>
+                            <span class="prop-price">$500,000</span>
+                            <div class="bedrooms-number">4 bedrooms</div>
+                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                            <button class="trans-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="prop-card col-md-4">
+                        <img src="images/prop-tow.webp">
+                        <div class="prop-card-info">
+                            <h6>queens way</h6>
+                            <span class="prop-price">$450,000</span>
+                            <div class="bedrooms-number">3 bedrooms</div>
+                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                            <button class="trans-btn">Read More</button>
+                        </div>
+                    </div>
+                    <div class="prop-card col-md-4">
+                        <img src="images/prop-three.webp">
+                        <div class="prop-card-info">
+                            <h6>randal close</h6>
+                            <span class="prop-price">$790,000</span>
+                            <div class="bedrooms-number">6 bedrooms</div>
+                            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                            <button class="trans-btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------>
+        <!--latest rental-->
+        <div class="latest-rental">
+            <h4>latest rental properties</h4>
+            <div class="rental-card rental-card-up">
+                <div class="rental-card-info ">
+                    <div class="rental-card-info-img ">
+                        <img src="images/rent-one.webp">
+                    </div>
+                    <div class="rental-card-info-data">
+                        <span class="rent-name">chase avenue</span>
+                        <span class="bedrooms-number">4 bedrooms</span>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                        <span class="rent-price">$500/per week</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rental-card rental-card-down">
+                <div class="rental-card-info  ">
+                    <div class="rental-card-info-data">
+                        <span class="rent-name">kings close</span>
+                        <span class="bedrooms-number">3 bedrooms</span>
+                        <p >I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                        <span class="rent-price">$450/per week</span>
+                    </div>
+                    <div class="rental-card-info-img">
+                        <img src="images/rent-two.webp">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------------->
+        <!-- realtors-->
+        <div class="realtors">
+            <div class="container">
+                <h4>realtors you can trust</h4>
+                <div class="row">
+                    <div class="realtors-card col-md-4">
+                        <i class="far fa-clipboard"></i>
+                        <h5>free regrestition no hidden fees</h5>
+                        <span>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</span>
+                    </div>
+                    <div class="realtors-card col-md-4">
+                        <i class="fas fa-layer-group"></i>
+                        <h5>free regrestition no hidden fees</h5>
+                        <span>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</span>
+                    </div> 
+                    <div class="realtors-card col-md-4">
+                        <i class="fas fa-street-view"></i>
+                        <h5>free regrestition no hidden fees</h5>
+                        <span>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------->
+        <!-- what our clients think-->
+        <div class="test">
+            <div class="overlay"></div>
+            <div class="container">
+                <h4>what our clients think </h4>
+                <div class="row">
+                    <div class="test-card col-md-4">
+                        <i class="fas fa-quote-right"></i>
+                        <p>"I'm a testimonial.Click to edit me and add text that says something nice about you and your services"</p>
+                        <span>- Tina & James Heart </span>
+                    </div>
+                    <div class="test-card col-md-4">
+                        <i class="fas fa-quote-right"></i>
+                        <p>"I'm a testimonial.Click to edit me and add text that says something nice about you and your services"</p>
+                        <span>- Tina & James Heart </span>
+                    </div>
+                    <div class="test-card col-md-4">
+                        <i class="fas fa-quote-right"></i>
+                        <p>"I'm a testimonial.Click to edit me and add text that says something nice about you and your services"</p>
+                        <span>- Tina & James Heart </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------->
+        <!--contact us-->
+        <div class="contact" id="contact">
+            <div class="container">
+                <h4>contact us</h4>
+                <div class="row">
+                    <div class="address-map col-lg-8">
+                        <h6>address</h6>
+                        <span>500 Terry Francois Street <br> San Francisco, CA 94158</span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27626.69729521169!2d31.23928083720005!3d30.05586859018104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840e059d98225%3A0x91cb6f582e8b215c!2z2KfZhNiy2YXYp9mE2YPYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1597094787033!5m2!1sar!2seg" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <h6>to speak with an agent, <br>please call or email us:</h6>
+                        <ul>
+                            <li>Email: info@mysite.com</li>
+                            <li>tel: 123-456-789</li>
+                            <li>fax: 123-456-789</li>
+                        </ul>
+                    </div>
+                    <div class="contact-form col-lg-4">
+                        <h6>ALTERNATIVELY YOU CAN FILL IN THE FOLLOWING CONTACT FORM:</h6>
+                        <div class="form">
+                            <input type="text" placeholder="name" class="form-control">
+                            <input type="text" placeholder="email" class="form-control">
+                            <input type="text" placeholder="subject" class="form-control">
+                            <textarea id="textarea" class="form-control" placeholder="message"></textarea>
+                            <button class="blue-btn ml-auto">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--scripts-->
+        <script src="js/jquery.js"></script>
+        <script src="js/all.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/jsCode.js"></script>
+        <script src="js/jqCode.js"></script>
+        <script src="js/vueCode.js"></script>
+        <script>
+       
+        </script>
+
+    </body>
+</html>
